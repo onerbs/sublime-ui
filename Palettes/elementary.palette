@@ -1,0 +1,21 @@
+// Color palette with the elementary, Inc brand colors
+// https://elementary.io/brand
+
+$red = #ED5353
+$orange = #FFA154
+$yellow = #FFE16B
+$green = #9BDB4D
+$cyan = #43D6B5
+$blue = #64BAFF
+$purple = #CD9EF7
+$pink = #F4679D
+$white = #CCCCCC
+$gray = #7E8087
+
+%background = #0B0A0D
+%caret = var(white)
+%foreground = var(white)
+%invisibles = #181520
+%selection = #333333
+%fold_marker = var(cyan)
+%line_highlight = #252525
