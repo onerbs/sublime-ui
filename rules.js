@@ -23,6 +23,7 @@ const rules = [
     foreground: 'var(blue)',
     scope: [
       'comment.tag.url',
+      'markup.underline.link',
       'punctuation.definition.variable.shell',
       'variable.other',
     ]
@@ -75,6 +76,24 @@ const rules = [
       'punctuation.definition.parameter',
       'variable.function',
       'variable.parameter',
+      'markup.raw',
+    ]
+  }, {
+    font_style: 'italic',
+    scope: [
+      'markup.italic.markdown'
+    ]
+  }, {
+    font_style: 'bold',
+    scope: [
+      'markup.bold.markdown',
+      'markup.heading',
+    ]
+  }, {
+    font_style: 'bold italic',
+    scope: [
+      'markup.bold.markdown markup.italic.markdown',
+      'markup.italic.markdown markup.bold.markdown',
     ]
   }
   /* OTHER */, {
