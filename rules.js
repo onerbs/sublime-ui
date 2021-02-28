@@ -81,19 +81,19 @@ const rules = [
   }, {
     font_style: 'italic',
     scope: [
-      'markup.italic.markdown'
+      'markup.italic'
     ]
   }, {
     font_style: 'bold',
     scope: [
-      'markup.bold.markdown',
+      'markup.bold',
       'markup.heading',
     ]
   }, {
     font_style: 'bold italic',
     scope: [
-      'markup.bold.markdown markup.italic.markdown',
-      'markup.italic.markdown markup.bold.markdown',
+      'markup.bold markup.italic',
+      'markup.italic markup.bold',
     ]
   }
   /* OTHER */, {
