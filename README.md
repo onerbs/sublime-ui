@@ -1,27 +1,27 @@
 # Sublime UI
 
-Utility to create Sublime Text 3 color schemes based on color palettes
+Utility to create Sublime Text color schemes based on color palettes.
 
 
 ## Creating palettes
 
-Take as reference the [example palette](https://github.com/onerbs/sublime-ui/blob/main/Palettes/elementary.palette).
+Take as reference the [example palette](Palettes/elementary.palette).
 
 The `palette` syntax is pretty simple:
 
-	A variable that starts with `$` will be placed in the `variables` section.
-	A variable that starts with `%` will be placed in the `globals` section.
+	A variable that starts with `$` will be placed in the `variables` section
+	A variable that starts with `%` will be placed in the `globals` section
 
-The `rules` section is maintained in `rules.js`, and is shared by all palettes.
+The `rules` section is maintained in [`lib/rules.mjs`](lib/rules.mjs), and is shared between palettes.
 
-> For further information on this topic, see [the official docs](https://www.sublimetext.com/docs/3/color_schemes.html)
+> For further information on this topic, visit [the full documentation](https://www.sublimetext.com/docs/color_schemes.html).
 
 
-## Usage
+## Compilation
 
 The entry point of this package is a NodeJS script, run it via:
 
-	node ${SublimePackages}/UI/ui.js
+	node ${SublimePackages}/UI/cli.mjs
 
 Alternatively, create a new Build System in
 
@@ -38,19 +38,9 @@ and write
 
 Give it a descriptive name and save it in a folder visible to Sublime Text.
 
-With the Build System created, just press `Ctrl + B` when focusing `ui.js`.
+With the Build System created, just press `Ctrl + B` when focusing `cli.mjs`.
 
 
 ## Installation
 
-	# Windows
-	git clone https://github.com/onerbs/sublime-ui ^
-		"%AppData%\Sublime Text 3\Packages\UI"
-
-	# Linux
-	git clone https://github.com/onerbs/sublime-ui \
-		"~/.config/sublime-text-3/Packages/UI"
-
-	# macOS
-	git clone https://github.com/onerbs/sublime-ui \
-		"~/Library/Application Support/Sublime Text 3/Packages/UI"
+Clone this repository inside the `Packages` folder in your Sublime Text installation directory.
