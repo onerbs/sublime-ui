@@ -1,19 +1,11 @@
-import { compile } from './lib/ui.mjs'
-import { existsSync } from 'fs'
+import * as ui from './lib/compiler.mjs'
 
 function main(rules = []) {
-  compile({
-    outDir: 'Schemes',
-    outExt: '.sublime-color-scheme',
-    srcDir: 'Palettes',
-    srcExt: '.palette',
-    userRules: rules,
-  })
+  const src = { dir: 'Palettes', ext: '.palette' };
+  const out = { dir: 'Schemes',  ext: '.sublime-color-scheme' };
+  ui.compile(src, out, rules);
 }
 
-if (existsSync('./rules.mjs'))
-  import('./rules.mjs')
-    .then(mod => main(mod.rules))
-
-else
-  main()
+import('./rules')
+  .then(mod => main(mod.default))
+  .catch(() => main());
